@@ -3,34 +3,38 @@ header {
     @at-root   
     .header__top {
         @include flex_properties(flex-end,center);
-        padding: 2px 0;
+        padding: 3px 0;
         background-color:map-get($colors,orange_color);
+        position: relative;
         &__menus1 {
-            @include mg_rule(right,1.7%);
+            @include mg_rule(right,3.7%);
             flex-basis: 67.5%;
             ul
                {
                 @include flex_properties(space-between,center);                
                } 
             li {
+                    text-align: center;
                     @at-root
                     .search {
                         text-indent: -9999px;
                         &::before {
                             @include font-icon("\f002",12px);
-                            margin-left: 2%;
+                            @include mg_rule(left,2%);
+                            text-indent: -28px;
                         }
-                        &::after {
-                            @include font-iconafter("|",12px);
-                            text-indent: 0;
-                        }
+                        // &::after {
+                        //     @include font-iconafter("|",12px);
+                        //     text-indent: 0;
+                        // }
                     }
 
                     a {
-                        padding: 0 23px;
+                        width: 100%;
+                        padding: 0 12px;
                         border-right: map-get($font,font-i) solid map-get($colors,primary_color);
                         color: map-get($colors, primary_color);
-                        font-size: map-get($font,font-x);
+                        font-size: map-get($font,font-xii);
                         white-space: nowrap;
                     }
 
@@ -41,7 +45,16 @@ header {
                     }
 
                     ul {
-                        display: none;            
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            flex-direction: column;
+                        // display: none;     
+                        li {
+                            a {
+                                border: none;
+                            }
+                        }       
                     }
 
                 }
@@ -68,30 +81,41 @@ header {
     }
 
     .header__bottom {
-        padding: 18px 0;
+        padding:22px 0;
         display: flex;
         align-items: center;
          @include flex_properties(normal,center);
         h1 {
+     
             flex-basis: 10%;
+            a { 
+                img {
+                  border: 1px solid #000;  
+                }
+            }
         }
 
+     
         &__menus {
             @include flex_properties(space-between,center);
             @include mg_rule(left,auto);
-            flex-basis: 79.7%;
-            li a {
-                padding: 0 33px;
+            @include mg_rule(right,0.6%);
+            flex-basis: 76.3%;
+            li
+            
+            a {
+                padding: 0 43px;
                 border-right: 1px solid map-get($colors,faint_black);
                 color: map-get($colors,orange_color);
-                font-size: map-get($font,font-xi);
+                font-size: map-get($font,font-xiv);
                 white-space: nowrap;
             }
 
-            li:last-child a {
-                padding-right: 0;
-                border-right: none;
+            :last-child {
+                padding: 0px;
+                border: none;
             }
+
         }
     }
 }

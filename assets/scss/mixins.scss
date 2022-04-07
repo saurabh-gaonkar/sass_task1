@@ -25,24 +25,24 @@
 
 @mixin reverse_breakpoint($device) {
     @if($device == "large-pc") {
-      @media screen and (min-width: map-get($breakpoints, large-pc)) { @content; }
+      @media screen and (max-width: map-get($breakpoints, large-pc)) { @content; }
     } 
     @else if($device == "pc") {
-      @media screen and (min-width: map-get($breakpoints, pc)) { @content; }
+      @media screen and (max-width: map-get($breakpoints, pc)) { @content; }
     } 
     @else if($device == "mini-pc") {
-      @media screen and (min-width: map-get($breakpoints, mini-pc)) { @content; }
+      @media screen and (max-width: map-get($breakpoints, mini-pc)) { @content; }
     } 
     @else if($device == "mini-ipad") {
-      @media screen and (min-width: map-get($breakpoints, mini-ipad)) { @content; }
+      @media screen and (max-width: map-get($breakpoints, mini-ipad)) { @content; }
     } 
     @else if($device == "tablet") {
-      @media screen and (min-width: map-get($breakpoints, tablet)) { @content; }
+      @media screen and (max-width: map-get($breakpoints, tablet)) { @content; }
     } 
     @else if($device == "mobile-x") {
-      @media screen and (min-width: map-get($breakpoints, mobile-x)) { @content; }
+      @media screen and (max-width: map-get($breakpoints, mobile-x)) { @content; }
     } 
     @else if($device == "mobile") {
-      @media screen and (min-width: map-get($breakpoints, mobile)) { @content; }
+      @media screen and (max-width: map-get($breakpoints, mobile)) { @content; }
     }
   }
