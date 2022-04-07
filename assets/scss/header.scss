@@ -44,7 +44,6 @@ header {
                         display: none;            
                     }
 
-
                 }
             }
         
@@ -58,6 +57,40 @@ header {
                     height: 5vh;
                     color: map-get($colors,primary_color);
                 }
+            }
+            @include reverse_breakpoint("mini-ipad") {
+                width: 20%;
+            }
+        }
+        @include reverse_breakpoint("mini-ipad") {
+            flex-direction: column;
+        }
+    }
+
+    .header__bottom {
+        padding: 18px 0;
+        display: flex;
+        align-items: center;
+         @include flex_properties(normal,center);
+        h1 {
+            flex-basis: 10%;
+        }
+
+        &__menus {
+            @include flex_properties(space-between,center);
+            @include mg_rule(left,auto);
+            flex-basis: 79.7%;
+            li a {
+                padding: 0 33px;
+                border-right: 1px solid map-get($colors,faint_black);
+                color: map-get($colors,orange_color);
+                font-size: map-get($font,font-xi);
+                white-space: nowrap;
+            }
+
+            li:last-child a {
+                padding-right: 0;
+                border-right: none;
             }
         }
     }
