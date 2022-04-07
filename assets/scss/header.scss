@@ -1,0 +1,65 @@
+// header styling here 
+header {
+    @at-root   
+    .header__top {
+        @include flex_properties(flex-end,center);
+        padding: 2px 0;
+        background-color:map-get($colors,orange_color);
+        &__menus1 {
+            @include mg_rule(right,1.7%);
+            flex-basis: 67.5%;
+            ul
+               {
+                @include flex_properties(space-between,center);                
+               } 
+            li {
+                    @at-root
+                    .search {
+                        text-indent: -9999px;
+                        &::before {
+                            @include font-icon("\f002",12px);
+                            margin-left: 2%;
+                        }
+                        &::after {
+                            @include font-iconafter("|",12px);
+                            text-indent: 0;
+                        }
+                    }
+
+                    a {
+                        padding: 0 23px;
+                        border-right: map-get($font,font-i) solid map-get($colors,primary_color);
+                        color: map-get($colors, primary_color);
+                        font-size: map-get($font,font-x);
+                        white-space: nowrap;
+                    }
+
+                    @at-root
+                    .drop_icon::after {
+                        @include font-iconafter("\f0d7",12px);
+                        margin-left: 6%;
+                    }
+
+                    ul {
+                        display: none;            
+                    }
+
+
+                }
+            }
+        
+        &__menus2 {
+            @include flex_properties(space-between,center);
+            @include mg_rule(right,2%);
+            flex-basis: 12%;
+            li {
+                img {
+                    width:  1vw;
+                    height: 5vh;
+                    color: map-get($colors,primary_color);
+                }
+            }
+        }
+    }
+}
+

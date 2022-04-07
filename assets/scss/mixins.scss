@@ -1,0 +1,48 @@
+@mixin flex_properties($justify,$align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    @content;
+}
+
+@mixin mg_rule($dir,$size) {
+    margin-#{$dir}:$size;
+}
+
+@mixin font-icon($icon-code,$icon-size) {
+    content: $icon-code;
+    float: right;
+    font-family: "fontAwesome";
+    font-size: $icon-size;
+    text-indent: 0;
+}
+
+@mixin font-iconafter($icon-code,$icon-size) {
+    content: $icon-code;
+    font-family: "fontAwesome";
+    font-size: $icon-size;
+}
+
+@mixin reverse_breakpoint($device) {
+    @if($device == "large-pc") {
+      @media screen and (min-width: map-get($breakpoints, large-pc)) { @content; }
+    } 
+    @else if($device == "pc") {
+      @media screen and (min-width: map-get($breakpoints, pc)) { @content; }
+    } 
+    @else if($device == "mini-pc") {
+      @media screen and (min-width: map-get($breakpoints, mini-pc)) { @content; }
+    } 
+    @else if($device == "mini-ipad") {
+      @media screen and (min-width: map-get($breakpoints, mini-ipad)) { @content; }
+    } 
+    @else if($device == "tablet") {
+      @media screen and (min-width: map-get($breakpoints, tablet)) { @content; }
+    } 
+    @else if($device == "mobile-x") {
+      @media screen and (min-width: map-get($breakpoints, mobile-x)) { @content; }
+    } 
+    @else if($device == "mobile") {
+      @media screen and (min-width: map-get($breakpoints, mobile)) { @content; }
+    }
+  }

@@ -1,0 +1,48 @@
+$colors: (
+  primary_color: #fff,
+  orange_color: #F4910B
+);
+
+/* ------ Font ------ */
+$font_family: (
+  icon_font: "fontAwesome",
+);
+
+/* ------ Font size ------ */
+$font: (
+  font-zero: 0,
+  font-i:1px,
+  font-x: 10px,
+  font-xi: 11px,
+  font-xii: 12px,
+  font-xiv:14px,
+  font-xv: 15px,
+  font-xvi: 16px,
+  font-xviii: 18px, 
+  font-xx: 20px, 
+  font-xxi: 21px,
+  font-xxii: 22px, 
+  font-xxiv: 24px, 
+  font-xxv: 25px, 
+  font-xxviii: 28px, 
+  font-xxx: 30px, 
+  font-xxxv: 35px, 
+  font-xl: 40px,
+  font-xlv: 45px,
+  font-l: 50px,
+  font-lxv: 65px,
+  font-lxxv: 75px,
+  font-lxxx: 80px,
+  font-cxx: 120px,
+);
+
+/*------ Breakpoints ------*/
+$breakpoints: (
+  large-pc: 1440px,
+  pc: 1280px,
+  mini-pc: 1024px,
+  mini-ipad: 995px,
+  tablet: 768px,
+  mobile-x: 540px,
+  mobile: 425px
+);
