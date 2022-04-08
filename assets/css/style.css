@@ -192,3 +192,9 @@ a {
     header .header__bottom__menus :last-child {
       padding: 0px;
       border: none; }
+<<<<<<< HEAD
+=======
+
+header .mobile-header {
+  display: none; }
+>>>>>>> html
