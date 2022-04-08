@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/* ------ Font ------ */
-/* ------ Font size ------ */
-/*------ Breakpoints ------*/
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -54,6 +51,7 @@ em {
 
 img {
   width: 100%;
+  height: 100%;
   border: 0;
   vertical-align: middle; }
 
@@ -144,7 +142,8 @@ li {
         position: absolute;
         top: 0;
         left: 0;
-        flex-direction: column; }
+        flex-direction: column;
+        display: none; }
         .header__top__menus1 li ul li a {
           border: none; }
   .header__top__menus2 {
@@ -155,7 +154,7 @@ li {
     flex-basis: 12%; }
     .header__top__menus2 li img {
       width: 1vw;
-      height: 5vh;
+      height: 18px;
       color: #fff; }
     @media screen and (max-width: 995px) {
       .header__top__menus2 {
@@ -185,16 +184,386 @@ header .header__bottom {
     header .header__bottom__menus li
 a {
       padding: 0 43px;
-      border-right: 1px solid #bbbdbf;
+      border-right: 1px solid rgba(0, 0, 0, 0.6);
       color: #F4910B;
       font-size: 14px;
       white-space: nowrap; }
     header .header__bottom__menus :last-child {
       padding: 0px;
       border: none; }
-<<<<<<< HEAD
-=======
 
 header .mobile-header {
   display: none; }
->>>>>>> html
+
+.banner {
+  position: relative; }
+  .banner__header {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    transform: translateX(-50%);
+    white-space: nowrap; }
+    @media screen and (max-width: 1280px) {
+      .banner__header {
+        font-size: 40px; } }
+    @media screen and (max-width: 995px) {
+      .banner__header {
+        font-size: 30px; } }
+  .banner figure {
+    height: 569px; }
+
+.take-a-look .wrapper {
+  display: flex;
+  justify-content: normal;
+  align-items: normal;
+  background-color: #F4910B; }
+  .take-a-look .wrapper figure {
+    width: 775px;
+    height: 508px; }
+
+.take-a-look__content {
+  padding-top: 109px;
+  padding-left: 10.1%;
+  flex-basis: 41.5%;
+  box-sizing: border-box; }
+  .take-a-look__content h2 {
+    width: 88%;
+    color: #fff;
+    font-size: 39px;
+    font-weight: bold; }
+    @media screen and (max-width: 1280px) {
+      .take-a-look__content h2 {
+        font-size: 27px; } }
+  .take-a-look__content__para {
+    width: 85%;
+    margin-top: 19px;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 26px; }
+  @media screen and (max-width: 1280px) {
+    .take-a-look__content {
+      padding-top: 20px; } }
+
+.take-a-look__button {
+  padding: 2% 4%;
+  margin-top: 43px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold; }
+
+.success {
+  margin-top: 84px; }
+  .success__exceptional {
+    display: flex;
+    justify-content: normal;
+    align-items: normal;
+    position: relative; }
+    .success__exceptional figure {
+      width: 774px;
+      height: 509px; }
+    .success__exceptional__header-box {
+      width: 64.8%;
+      padding: 52px 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #1B5788; }
+      .success__exceptional__header-box h3 {
+        color: #fff;
+        font-size: 43px;
+        text-align: center; }
+    .success__exceptional__para {
+      padding: 0 3% 0 10%;
+      margin-top: 221px;
+      flex-basis: 53.7%;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 23px;
+      text-align: left;
+      box-sizing: border-box; }
+  .success__design {
+    display: flex;
+    justify-content: normal;
+    align-items: normal;
+    position: relative; }
+    .success__design figure {
+      width: 565px;
+      height: 509px;
+      flex-basis: 56.2%; }
+    .success__design__header-box {
+      width: 64.8%;
+      padding: 52px 16px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #F4910B;
+      box-sizing: border-box; }
+      .success__design__header-box h3 {
+        color: #fff;
+        font-size: 43px;
+        text-align: center; }
+    .success__design__para {
+      padding: 0 13% 0 6%;
+      margin-top: 255px;
+      flex-basis: 53.7%;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 23px;
+      text-align: left;
+      box-sizing: border-box; }
+  .success__nurturing {
+    display: flex;
+    justify-content: normal;
+    align-items: normal;
+    position: relative; }
+    .success__nurturing figure {
+      width: 674px;
+      height: 516px;
+      flex-basis: 56.2%; }
+    .success__nurturing__header-box {
+      width: 64.8%;
+      padding: 52px 16px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #359FDA;
+      box-sizing: border-box; }
+      .success__nurturing__header-box h3 {
+        color: #fff;
+        font-size: 43px;
+        text-align: center; }
+    .success__nurturing__para {
+      padding: 0 7% 0 10.2%;
+      margin-top: 221px;
+      flex-basis: 53.7%;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 23px;
+      text-align: left;
+      box-sizing: border-box; }
+
+.application-period .wrapper {
+  background: #E5E5E5;
+  padding: 74px 0; }
+  .application-period .wrapper h4 {
+    color: #7A7C80;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center; }
+
+.application-period__heading {
+  color: #7A7C80;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center; }
+
+.application-period__buttons {
+  margin-top: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: normal;
+  column-gap: 19px; }
+  .application-period__buttons li {
+    width: 155px;
+    padding: 12px 0;
+    border-radius: 8px;
+    background-color: #F4910B; }
+    .application-period__buttons li a {
+      width: 100%;
+      color: #fff;
+      font-weight: bold;
+      text-align: center; }
+
+.what-parents-saying {
+  margin-top: 83px; }
+  .what-parents-saying__header .wrapper {
+    padding: 25px 0;
+    background-color: #F27F0D; }
+    .what-parents-saying__header .wrapper h5 {
+      color: #fff;
+      font-size: 42px;
+      text-align: center; }
+  .what-parents-saying__content {
+    margin-left: 7%; }
+    .what-parents-saying__content p {
+      width: 90%;
+      color: #fff;
+      font-size: 26px;
+      text-align: center;
+      line-height: 43px; }
+      @media screen and (max-width: 1280px) {
+        .what-parents-saying__content p {
+          line-height: initial; } }
+    .what-parents-saying__content span {
+      width: 90%;
+      display: block;
+      color: #fff;
+      color: #fff;
+      font-size: 19px;
+      font-weight: bold;
+      text-align: center; }
+  .what-parents-saying__prev {
+    display: block;
+    text-indent: -9999px; }
+    .what-parents-saying__prev::before {
+      content: "";
+      float: right;
+      font-family: "fontAwesome";
+      font-size: 70px;
+      text-indent: 0;
+      color: #fff; }
+  .what-parents-saying__next {
+    display: block;
+    text-indent: -9999px; }
+    .what-parents-saying__next::before {
+      content: "";
+      float: right;
+      font-family: "fontAwesome";
+      font-size: 70px;
+      text-indent: 0;
+      color: #fff; }
+  .what-parents-saying__slider .wrapper {
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    padding: 94px 38px;
+    background-color: #F4910B;
+    box-sizing: border-box; }
+  .what-parents-saying figure {
+    margin-left: 2.4%; }
+
+.application-period .wrapper {
+  background: #E5E5E5;
+  padding: 74px 0; }
+  .application-period .wrapper h4 {
+    color: #7A7C80;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center; }
+
+.application-period__heading {
+  color: #7A7C80;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center; }
+
+.application-period__buttons {
+  margin-top: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: normal;
+  column-gap: 19px; }
+  .application-period__buttons li {
+    width: 155px;
+    padding: 12px 0;
+    border-radius: 8px;
+    background-color: #F4910B; }
+    .application-period__buttons li a {
+      width: 100%;
+      color: #fff;
+      font-weight: bold;
+      text-align: center; }
+
+.application-process {
+  margin-top: 84px; }
+  .application-process__header .wrapper h6 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center; }
+  .application-process__header__title {
+    padding: 44px 0;
+    background-color: #37A4E1; }
+  .application-process__header__buttons {
+    display: flex;
+    justify-content: normal;
+    align-items: normal; }
+    .application-process__header__buttons button {
+      padding: 27px 0;
+      flex-basis: 25%;
+      border: none;
+      background-color: #359EDA;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold; }
+      .application-process__header__buttons button:hover {
+        background-color: #14466E; }
+  .application-process__content .wrapper {
+    display: flex;
+    justify-content: normal;
+    align-items: normal; }
+  .application-process__content__leftpart {
+    padding: 5.1% 7% 7.4%;
+    flex-basis: 51.3%;
+    background-color: #E5E5E5; }
+    .application-process__content__leftpart__heading {
+      color: #F4910B;
+      font-size: 24px; }
+    .application-process__content__leftpart__heading2 {
+      margin-top: 38px;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 24px; }
+    .application-process__content__leftpart__rules {
+      margin-top: 28px; }
+      .application-process__content__leftpart__rules li {
+        width: -webkit-fill-available;
+        margin-bottom: 20px;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 20px; }
+        .application-process__content__leftpart__rules li::before {
+          content: "\f111";
+          color: #F4910B;
+          font-family: "fontAwesome";
+          font-size: 7px;
+          vertical-align: middle;
+          margin-right: 3%; }
+    .application-process__content__leftpart__schools-title {
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 24px; }
+    .application-process__content__leftpart__schools {
+      display: flex;
+      justify-content: normal;
+      align-items: normal;
+      margin-top: 31px;
+      flex-direction: column;
+      row-gap: 30px; }
+      .application-process__content__leftpart__schools__name {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 0.7); }
+      .application-process__content__leftpart__schools a {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 20px; }
+  .application-process__content__rightpart {
+    width: 464px; }
+  .application-process__bottom .wrapper {
+    background: #37A4E1;
+    padding: 68px 0 72px; }
+    .application-process__bottom .wrapper h4 {
+      color: #fff;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center; }
+  .application-process__bottom__heading {
+    color: #7A7C80;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center; }
+  .application-process__bottom__buttons {
+    margin-top: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    column-gap: 19px; }
+    .application-process__bottom__buttons li {
+      width: 155px;
+      padding: 12px 0;
+      border-radius: 8px;
+      background-color: #14466E; }
+      .application-process__bottom__buttons li a {
+        width: 100%;
+        color: #fff;
+        font-weight: bold;
+        text-align: center; }

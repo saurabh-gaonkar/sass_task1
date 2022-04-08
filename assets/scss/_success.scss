@@ -1,0 +1,117 @@
+.success {
+
+    @include mg_rule(top,84px);
+
+    @at-root
+    &__exceptional {
+        @include flex_properties(normal,normal);
+        position: relative;
+    
+        figure {
+            width: 774px;
+            height: 509px;
+        }
+        @at-root
+        &__header-box {   
+            width: 64.8%;
+            padding: 52px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: map-get($colors,dark_blue);
+            h3 {
+                color: map-get($colors,primary_color);
+                font-size: 43px;
+                text-align: center;
+            }
+        }
+        @at-root
+        &__para {
+            padding: 0 3% 0 10%;
+            margin-top: 221px;
+            flex-basis: 53.7%;
+            color: map-get($colors,faint_black);
+            font-size: 23px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+    }
+
+    &__design {
+            @include flex_properties(normal,normal);
+            position: relative;
+
+            figure {
+                width: 565px;
+                height: 509px;
+                flex-basis: 56.2%;
+            }
+
+            @at-root
+        &__header-box {   
+            width: 64.8%;
+            padding: 52px 16px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: map-get($colors,orange_color);
+            box-sizing: border-box;
+            h3 {
+                color: map-get($colors,primary_color);
+                font-size: 43px;
+                text-align: center;
+            }
+        }
+        @at-root
+        &__para {
+            padding: 0 13% 0 6%;
+            margin-top: 255px;
+            flex-basis: 53.7%;
+            color: map-get($colors,faint_black);
+            font-size: 23px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+    }
+
+    &__nurturing {
+        @include flex_properties(normal,normal);
+        position: relative;
+    
+        figure {
+            width: 674px;
+            height: 516px;
+            flex-basis: 56.2%;
+        }
+
+        @at-root
+        &__header-box {   
+            width: 64.8%;
+            padding: 52px 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: map-get($colors,faint_blue);
+            box-sizing: border-box;
+            h3 {
+                color: map-get($colors,primary_color);
+                font-size: 43px;
+                text-align: center;
+            }
+        }
+
+        @at-root
+        &__para {
+            padding: 0 7% 0 10.2%;
+            margin-top: 221px;
+            flex-basis: 53.7%;
+            color: map-get($colors,faint_black);
+            font-size: 23px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+    }
+    
+
+
+}

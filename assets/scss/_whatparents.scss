@@ -1,0 +1,74 @@
+.what-parents-saying {
+    @include mg_rule(top,83px);
+    @at-root
+    &__header {
+    .wrapper {
+        padding: 25px 0;
+        background-color:map-get($colors,dark_orange);
+        h5 {
+            color: #fff;
+            font-size: 42px;
+            text-align: center;
+        }
+    }
+}
+
+@at-root
+&__content {
+
+    margin-left: 7%;
+    p {
+        width: 90%;
+        color: map-get($colors,primary_color);
+        font-size: 26px;
+        text-align: center;
+        line-height: 43px;
+        @include reverse_breakpoint("pc") {
+            line-height: initial;
+        }
+    }
+
+    span {
+        width: 90%;
+        display: block;
+        color: map-get($colors,primary_color);
+        color: map-get($colors,primary_color);
+        font-size: map-get($font,font-xix);
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+@at-root
+&__prev {
+    display: block;
+    text-indent: -9999px;
+    &::before {
+        @include font-icon("\f104",70px);
+        color: map-get($colors,primary_color);
+    }
+}
+
+@at-root
+&__next {
+    display: block;
+    text-indent: -9999px;
+    &::before {
+        @include font-icon("\f105",70px);
+        color: map-get($colors,primary_color);
+    }
+}
+
+&__slider {
+
+    .wrapper {
+    @include flex_properties(normal,center);
+    padding: 94px 38px;
+    background-color: map-get($colors,orange_color);
+    box-sizing: border-box;
+    }
+}
+    figure {
+        margin-left: 2.4%;
+    }
+}

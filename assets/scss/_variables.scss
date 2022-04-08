@@ -1,18 +1,31 @@
+
+// colors
 $colors: (
   primary_color: #fff,
   orange_color: #F4910B,
-  faint_black: #bbbdbf
+  faint_black: rgba(0,0,0,0.6),
+  faint_gray:#E5E5E5,
+  dark_blue: #1B5788,
+  faint_blue:#359FDA,
+  dark_gray:#7A7C80,
+  dark_orange:#F27F0D,
+  bright-blue: #37A4E1,
+  light-blue: #359EDA,
+  black-blue: #14466E,
+  smoke-color: #E5E5E5,
+  light-black: rgba(0,0,0,0.7),
+  lighter-black: rgba(0,0,0,0.5)
 );
-
-/* ------ Font ------ */
+// font
 $font_family: (
   icon_font: "fontAwesome",
 );
 
-/* ------ Font size ------ */
+// font-size
 $font: (
   font-zero: 0,
   font-i:1px,
+  font-vii:7px,
   font-x: 10px,
   font-xi: 11px,
   font-xii: 12px,
@@ -20,13 +33,18 @@ $font: (
   font-xv: 15px,
   font-xvi: 16px,
   font-xviii: 18px, 
+  font-xix: 19px,
   font-xx: 20px, 
   font-xxi: 21px,
   font-xxii: 22px, 
+  font-xxiii: 23px,
   font-xxiv: 24px, 
   font-xxv: 25px, 
+  font-xxvii:27px,
   font-xxviii: 28px, 
   font-xxx: 30px, 
+  font-xxxii: 32px,
+  font-xxxiv:34px,
   font-xxxv: 35px, 
   font-xl: 40px,
   font-xlv: 45px,
@@ -37,7 +55,7 @@ $font: (
   font-cxx: 120px,
 );
 
-/*------ Breakpoints ------*/
+// breakpoints
 $breakpoints: (
   large-pc: 1440px,
   pc: 1280px,

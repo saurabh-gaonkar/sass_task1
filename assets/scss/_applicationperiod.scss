@@ -1,0 +1,40 @@
+.application-period {
+    .wrapper {
+        background: map-get($colors,faint_gray);
+        padding: 74px 0;
+
+        h4 {
+            color: map-get($colors,dark_gray);
+            font-size: map-get($font,font-xxxiv);
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+    @at-root
+    &__heading {
+        color: map-get($colors,dark_gray);
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    @at-root
+    &__buttons {
+        @include mg_rule(top,13px);
+        @include flex_properties(center,normal);
+        column-gap: 19px;
+        
+        li {
+            width: 155px;
+            padding: 12px 0;
+            border-radius: 8px;
+            background-color:map-get($colors,orange_color);
+            a {
+                width: 100%;
+                color: map-get($colors,primary_color);
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+    }
+}

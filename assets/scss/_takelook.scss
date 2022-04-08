@@ -1,0 +1,54 @@
+.take-a-look {
+    .wrapper {
+        @include flex_properties(normal,normal);
+        background-color: map-get($colors,orange_color);
+        
+        figure {
+            width: 775px;
+            height: 508px;
+        }
+    }
+
+    &__content {
+        padding-top: 109px;
+        padding-left: 10.1%;
+        flex-basis: 41.5%;
+        box-sizing: border-box;
+        
+        h2 {
+            width: 88%;
+            color: map-get($colors,primary_color);
+            font-size: 39px;
+            font-weight: bold;
+            
+        @include reverse_breakpoint("pc") {
+            font-size: map-get($font,font-xxvii);
+        }
+            
+        }
+
+        &__para {
+            width: 85%;
+            margin-top: 19px;
+            color: #fff;
+            font-size: 18px;
+            letter-spacing: 1px;
+            line-height: 26px;        
+        }
+
+        @include reverse_breakpoint("pc") {
+            padding-top: 20px;
+        }
+    }
+
+    &__button {
+        padding: 2% 4%;
+        margin-top: 43px;
+        border: 1px solid map-get($colors,primary_color);
+        background-color: transparent;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+}

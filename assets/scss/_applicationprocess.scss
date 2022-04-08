@@ -1,0 +1,138 @@
+.application-process {
+    @include mg_rule(top,84px);
+    &__header {
+        .wrapper {
+            h6 {
+                color: map-get($colors,primary_color);
+                font-size: 45px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        &__title {
+            padding: 44px 0;
+            background-color: map-get($colors,bright-blue);
+        }
+
+        &__buttons {
+            @include flex_properties(normal,normal);
+            button {
+                padding: 27px 0;
+                flex-basis: 25%;
+                border: none;
+                background-color: map-get($colors,light-blue);
+                color: map-get($colors,primary_color);
+                font-size: map-get($font,font-xiv);
+                font-weight: bold;
+                &:hover {
+                    background-color: map-get($colors,black-blue);
+                }
+            }
+        }
+    }
+    @at-root
+    &__content {
+        .wrapper {
+            @include flex_properties(normal,normal);
+        }
+        @at-root
+        &__leftpart {
+            padding: 5.1% 7% 7.4%;
+            flex-basis: 51.3%;
+            background-color: map-get($colors,smoke-color);
+            @at-root
+            &__heading {
+                color: map-get($colors,orange_color);
+                font-size: map-get($font,font-xxiv);
+            }
+            @at-root
+            &__heading2 {
+                @include mg_rule(top,38px);
+                color: map-get($colors,light-black);
+                font-size: map-get($font,font-xxiv);
+            }
+            @at-root
+            &__rules {
+                @include mg_rule(top,28px);
+                li {
+                    width: -webkit-fill-available;
+                    @include mg_rule(bottom,20px);
+                    color: map-get($colors,faint_black);
+                    font-size: 20px;
+                    &::before {
+                        content: "\f111";
+                        color: map-get($colors,orange_color);
+                        font-family: "fontAwesome";
+                        font-size: map-get($font,font-vii);
+                        vertical-align: middle;
+                        @include mg_rule(right,3%);
+                    }
+                }
+            }
+            @at-root
+            &__schools-title {
+                color: map-get($colors,light-black);
+                font-size: map-get($font,font-xxiv);
+            }
+            @at-root
+            &__schools {
+                @include flex_properties(normal,normal);
+                @include mg_rule(top,31px);
+                flex-direction: column;
+                row-gap: 30px;
+                &__name {
+                    font-size: map-get($font,font-xxiv);
+                    color: map-get($colors,light-black);
+                }
+                a {
+                    color: map-get($colors,lighter-black);
+                    font-size: map-get($font,font-xx);
+                }
+            }
+        }
+        &__rightpart {
+            width: 464px;
+        }
+    }
+
+    &__bottom {
+            .wrapper {
+                background: map-get($colors,bright-blue);
+                padding: 68px 0 72px;
+        
+                h4 {
+                    color: map-get($colors,primary_color);
+                    font-size: map-get($font,font-xxxii);
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+            @at-root
+            &__heading {
+                color: map-get($colors,dark_gray);
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+            }
+        
+            @at-root
+            &__buttons {
+                @include mg_rule(top,13px);
+                @include flex_properties(center,normal);
+                column-gap: 19px;
+                
+                li {
+                    width: 155px;
+                    padding: 12px 0;
+                    border-radius: 8px;
+                    background-color:map-get($colors,black-blue);
+                    a {
+                        width: 100%;
+                        color: map-get($colors,primary_color);
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
