@@ -1,11 +1,9 @@
-
 // colors
-$colors: (
-  primary_color: #fff,
-  faint_white: rgba(255,255,255,0.7),
+$colors: (primary_color: #fff,
+  faint_white: rgba(255, 255, 255, 0.7),
   black_color:#000,
   orange_color: #F4910B,
-  faint_black: rgba(0,0,0,0.6),
+  faint_black: rgba(0, 0, 0, 0.6),
   faint_gray:#E5E5E5,
   dark_blue: #1B5788,
   faint_blue:#359FDA,
@@ -13,19 +11,17 @@ $colors: (
   dark_orange:#F27F0D,
   bright-blue: #37A4E1,
   light-blue: #359EDA,
+  dark-blue: #1D5A8A,
   black-blue: #14466E,
   smoke-color: #E5E5E5,
-  light-black: rgba(0,0,0,0.7),
-  lighter-black: rgba(0,0,0,0.5)
-);
+  light-black: rgba(0, 0, 0, 0.7),
+  lighter-black: rgba(0, 0, 0, 0.5));
 // font
-$font_family: (
-  icon_font: "fontAwesome",
+$font_family: (icon_font: "fontAwesome",
 );
 
 // font-size
-$font: (
-  font-zero: 0,
+$font: (font-zero: 0,
   font-i:1px,
   font-vii:7px,
   font-x: 10px,
@@ -35,27 +31,29 @@ $font: (
   font-xiv:14px,
   font-xv: 15px,
   font-xvi: 16px,
-  font-xviii: 18px, 
+  font-xvii: 17px,
+  font-xviii: 18px,
   font-xix: 19px,
-  font-xx: 20px, 
+  font-xx: 20px,
   font-xxi: 21px,
-  font-xxii: 22px, 
+  font-xxii: 22px,
   font-xxiii: 23px,
-  font-xxiv: 24px, 
-  font-xxv: 25px, 
+  font-xxiv: 24px,
+  font-xxv: 25px,
   font-xxvi: 26px,
   font-xxvii:27px,
-  font-xxviii: 28px, 
-  font-xxx: 30px, 
+  font-xxviii: 28px,
+  font-xxx: 30px,
   font-xxxii: 32px,
   font-xxxiii: 33px,
   font-xxxiv:34px,
-  font-xxxv: 35px, 
+  font-xxxv: 35px,
   font-xxxviii: 38px,
   font-xxxix:39px,
   font-xl: 40px,
   font-xlii: 42px,
   font-xlv: 45px,
+  font-xlix: 49px,
   font-l: 50px,
   font-lxv: 65px,
   font-lxxv: 75px,
@@ -64,12 +62,10 @@ $font: (
 );
 
 // breakpoints
-$breakpoints: (
-  large-pc: 1440px,
+$breakpoints: (large-pc: 1440px,
   pc: 1280px,
   mini-pc: 1024px,
   mini-ipad: 995px,
   tablet: 768px,
   mobile-x: 540px,
-  mobile: 425px
-);
+  mobile: 425px);

@@ -6,6 +6,7 @@ header {
         padding: 3px 0;
         background-color: map-get($colors, orange_color);
         position: relative;
+
         &__menus1 {
             @include mg_rule(right, 5.1%);
             flex-basis: 66%;
@@ -30,9 +31,10 @@ header {
                             @include mg_rule(left, 2%);
                             text-indent: -28px;
                         }
+
                         @include reverse_breakpoint("tablet") {
-                           display: none
-                        } 
+                            display: none
+                        }
                     }
 
                     a {
@@ -44,8 +46,28 @@ header {
                         font-size: map-get($font, font-xii);
                         white-space: nowrap;
 
+                        @include reverse_breakpoint("pc") {
+                            border-right: none;
+                        }
+
                         @include reverse_breakpoint("mini-ipad") {
                             border-right: none;
+                        }
+
+                        @include transition-effect();
+
+                        &:hover {
+                            @include hover-effect();
+
+                            @include reverse_breakpoint("tablet") {
+                                color: map-get($colors, primary_color);
+                            }
+                        }
+
+                        @include transition-effect();
+
+                        &:hover {
+                            @include hover-effect();
                         }
                     }
 
@@ -60,11 +82,13 @@ header {
 
                     ul {
                         width: 100%;
+                        padding-right: 20px;
+                        display: none;
                         position: absolute;
                         top: 30px;
                         left: 0;
                         flex-direction: column;
-                        display: none;
+                        background-color: map-get($colors, black_color);
 
                         li {
                             width: 100%;
@@ -74,21 +98,34 @@ header {
                                 border: none;
                                 color: map-get($colors, orange_color);
                                 text-align: center;
+                                @include transition-effect();
+
+                                &:hover {
+                                    @include hover-effect();
+                                }
+
+                                @include transition-effect();
+
+                                &:hover {
+                                    @include hover-effect();
+                                }
                             }
                         }
+
                         @include reverse_breakpoint("tablet") {
                             z-index: 1;
                             top: 0;
                             left: 100%;
-                        } 
+                        }
 
                     }
 
                 }
+
                 @include reverse_breakpoint("tablet") {
                     flex-direction: column;
                     row-gap: 10px;
-                } 
+                }
             }
         }
 
@@ -98,6 +135,7 @@ header {
 
             @include reverse_breakpoint("mini-ipad") {
                 width: 35%;
+                margin: auto;
             }
 
             flex-basis: 12%;
@@ -109,6 +147,14 @@ header {
                     color: map-get($colors, primary_color);
                 }
             }
+
+            @include reverse_breakpoint("pc") {
+                flex-basis: 20%;
+            }
+
+            @include reverse_breakpoint("mobile") {
+                width: 50%;
+            }
         }
 
         @include reverse_breakpoint("mini-ipad") {
@@ -116,25 +162,26 @@ header {
         }
 
         @include reverse_breakpoint("tablet") {
-            // display: none;
+            display: none;
         }
+
         @include reverse_breakpoint("mini-ipad") {
-            background-color: map-get($colors,black_color);
+            background-color: map-get($colors, black_color);
         }
     }
-    @at-root
-    .header__bottom {
+
+    @at-root .header__bottom {
         padding: 22px 0;
         display: flex;
         align-items: center;
-        
+
         @include reverse_breakpoint("mini-ipad") {
-           flex-direction: column;
-           row-gap: 10px;
+            flex-direction: column;
+            row-gap: 10px;
         }
 
         @include reverse_breakpoint("tablet") {
-            // display: none;
+            display: none;
         }
 
         @include flex_properties(normal, center);
@@ -148,10 +195,13 @@ header {
                     border: 1px solid #000;
                 }
             }
+
+            @include reverse_breakpoint("mini-ipad") {
+                text-align: center;
+            }
         }
 
-        @at-root
-        &__menus {
+        @at-root &__menus {
             @include flex_properties(space-between, center);
             @include mg_rule(left, auto);
             @include mg_rule(right, 0.6%);
@@ -165,24 +215,43 @@ header {
                 white-space: nowrap;
 
                 @include reverse_breakpoint("mini-ipad") {
-                    font-size: 12px;
+                    font-size: map-get($font, font-xii);
                 }
+
                 @include reverse_breakpoint("tablet") {
-                    font-size: 10px;
-                } 
+                    font-size: map-get($font, font-x);
+                }
+
+                @include reverse_breakpoint("mobile") {
+                    font-size: map-get($font, font-vii);
+                }
+
+                @include transition-effect();
+
+                &:hover {
+                    @include hover-effect();
+                }
+
+                @include transition-effect();
+
+                &:hover {
+                    @include hover-effect();
+                }
             }
 
             :last-child {
                 padding: 0px;
                 border: none;
             }
+
             @include reverse_breakpoint("mini-ipad") {
                 width: 100%;
                 margin-left: 0;
-            } 
+            }
+
             @include reverse_breakpoint("tablet") {
                 margin-left: 1%;
-            } 
+            }
 
         }
     }
@@ -201,6 +270,7 @@ header {
         @at-root &__menu {
             color: map-get($colors, primary_color);
             font-size: map-get($font, font-xxxviii);
+            cursor: pointer;
 
             &::after {
                 @include font-iconafter("\f107", 30px);

@@ -1,27 +1,30 @@
 .banner {
     position: relative;
-      
+
     &__header {
         position: absolute;
-        bottom:11%;
+        bottom: 11%;
         left: 50%;
         color: map-get($colors, primary_color);
-        font-size: 50px;
+        font-size: map-get($font,font-l);
         font-weight: bold;
         transform: translateX(-50%);
         white-space: nowrap;
+
         @include reverse_breakpoint("pc") {
-            font-size: 40px;
+            font-size: map-get($font,font-xl);
         }
+
         @include reverse_breakpoint("mini-ipad") {
-            font-size: 30px;
+            font-size: map-get($font,font-xxx);
         }
+
         @include reverse_breakpoint("tablet") {
-            font-size: 17px;
+            font-size: map-get($font,font-xvii);
         }
     }
 
     figure {
         height: 569px;
-}
+    }
 }

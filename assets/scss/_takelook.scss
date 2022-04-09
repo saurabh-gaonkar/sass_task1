@@ -1,16 +1,20 @@
 .take-a-look {
-    @include mg_rule(top,82px);
+    @include mg_rule(top, 82px);
+
     .wrapper {
-        @include flex_properties(normal,normal);
+        @include flex_properties(normal, normal);
+
         @include reverse_breakpoint("mini-ipad") {
             flex-direction: column-reverse;
         }
-        background-color: map-get($colors,orange_color);
-        
+
+        background-color: map-get($colors, orange_color);
+
         figure {
             width: 775px;
             height: 508px;
-            @include reverse_breakpoint("mini-ipad") {
+
+            @include reverse_breakpoint("large-pc") {
                 width: auto;
             }
         }
@@ -21,39 +25,43 @@
         padding-left: 10.1%;
         flex-basis: 41.5%;
         box-sizing: border-box;
+
         @include reverse_breakpoint("mini-ipad") {
             padding-left: 0;
         }
-        
+
         h2 {
             width: 88%;
-            color: map-get($colors,primary_color);
-            font-size: map-get($font,font-xxxix);
+            color: map-get($colors, primary_color);
+            font-size: map-get($font, font-xxxix);
             font-weight: bold;
-            
-        @include reverse_breakpoint("pc") {
-            font-size: map-get($font,font-xxvii);
-        }
-        @include reverse_breakpoint("mini-ipad") {
-            width: 100%;
-            text-align: center;
-        }  
-        @include reverse_breakpoint("tablet") {
-            font-size: map-get($font,font-xxiii);
-        }
+
+            @include reverse_breakpoint("pc") {
+                font-size: map-get($font, font-xxvii);
+            }
+
+            @include reverse_breakpoint("mini-ipad") {
+                width: 100%;
+                text-align: center;
+            }
+
+            @include reverse_breakpoint("tablet") {
+                font-size: map-get($font, font-xxiii);
+            }
         }
 
         &__para {
             width: 85%;
             margin-top: 19px;
             color: #fff;
-            font-size: 18px;
+            font-size: map-get($font,font-xviii);
             letter-spacing: 1px;
-            line-height: 26px;    
+            line-height: 26px;
+
             @include reverse_breakpoint("mini-ipad") {
                 width: 100%;
                 text-align: center;
-            }    
+            }
         }
 
         @include reverse_breakpoint("pc") {
@@ -62,18 +70,43 @@
     }
 
     &__button {
-        @include mg_rule(top,43px);
+        @include mg_rule(top, 43px);
         padding: 2% 6.4% 2.5%;
         margin-top: 43px;
-        border: 1px solid map-get($colors,primary_color);
+        border: 1px solid map-get($colors, primary_color);
         border-radius: 5px;
         background-color: transparent;
         color: #fff;
-        font-size: 16px;
+        font-size: map-get($font,font-xvi);
         font-weight: bold;
+
+        &:hover {
+            background-color: map-get($colors, dark_blue);
+        }
+
+        @include transition-effect();
+
         @include reverse_breakpoint("mini-ipad") {
             margin: 43px auto;
             display: block;
+        }
+    }
+
+    @at-root &__video {
+        position: relative;
+
+        @at-root .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            text-indent: -9999px;
+
+            &::before {
+                @include font-icon("\f01d", 111px);
+                color: map-get($colors, primary_color);
+            }
         }
     }
 

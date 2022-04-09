@@ -1,95 +1,93 @@
 .what-parents-saying {
-    @include mg_rule(top,83px);
-    @at-root
-    &__header {
-    .wrapper {
-        padding: 24px 0;
-        background-color:map-get($colors,dark_orange);
-        h5 {
-            color: #fff;
-            font-size: map-get($font, font-xl22);
+    @include mg_rule(top, 83px);
+
+    @at-root &__header {
+        .wrapper {
+            padding: 24px 0;
+            background-color: map-get($colors, dark_orange);
+
+            h5 {
+                color: #fff;
+                font-size: map-get($font, font-xlii);
+                text-align: center;
+
+                @include reverse_breakpoint("tablet") {
+                    font-size: map-get($font, font-xxviii);
+                }
+            }
+            
+        }
+    }
+
+    @at-root &__content {
+        flex-basis: 41%;
+        margin: 3% 7%;
+
+        p {
+            color: map-get($colors, primary_color);
+            font-size: map-get($font, font-xxvi);
             text-align: center;
+            line-height: 43px;
+
+            @include mg_rule(bottom, 20px);
+
+            @include reverse_breakpoint("pc") {
+                font-size: 20px;
+                line-height: initial;
+            }
+
+            @include reverse_breakpoint("mini-ipad") {
+                width: 100%;
+            }
+
             @include reverse_breakpoint("tablet") {
-                font-size: map-get($font,font-xxviii);
+                font-size: map-get($font, font-xxiii);
+            }
+        }
+
+        span {
+            display: block;
+            color: map-get($colors, primary_color);
+            color: map-get($colors, primary_color);
+            font-size: map-get($font, font-xix);
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+
+    &__slider {
+
+        .wrapper {
+            padding: 94px;
+            background-color: map-get($colors, orange_color);
+            box-sizing: border-box;
+
+            @include reverse_breakpoint("mini-ipad") {
+                padding: 0;
+            }
+        }
+
+        @include reverse_breakpoint("mini-ipad") {
+            flex-direction: column;
+        }
+
+        @at-root &__contents {
+            @include flex-properties(normal, center);
+
+            @include reverse_breakpoint("mini-ipad") {
+                flex-direction: column;
+                row-gap: 50px;
             }
         }
     }
-}
 
-@at-root
-&__slider {
-    @include flex-properties(normal,center);
-}
-
-@at-root
-&__content {
-
-    margin:3% 7%;
-    p {
-        width: 90%;
-        color: map-get($colors,primary_color);
-        font-size: 26px;
-        text-align: center;
-        line-height: 43px;
-        @include reverse_breakpoint("pc") {
-            line-height: initial;
-        }
+    figure {
+        width: 512px;
+        height: 343px;
         @include reverse_breakpoint("mini-ipad") {
             width: 100%;
         }
-        @include reverse_breakpoint("tablet") {
-            font-size: map-get($font,font-xxiii);
-        }
-    }
-
-    span {
-        width: 90%;
-        display: block;
-        color: map-get($colors,primary_color);
-        color: map-get($colors,primary_color);
-        font-size: map-get($font,font-xix);
-        font-weight: bold;
-        text-align: center;
-    }
-}
-
-@at-root
-&__prev {
-    display: block;
-    text-indent: -9999px;
-    &::before {
-        @include font-icon("\f104",70px);
-        color: map-get($colors,primary_color);
-    }
-}
-
-@at-root
-&__next {
-    display: block;
-    text-indent: -9999px;
-    &::before {
-        @include font-icon("\f105",70px);
-        color: map-get($colors,primary_color);
-    }
-}
-
-&__slider {
-
-    .wrapper {
-    @include flex_properties(normal,center);
-    padding: 94px 38px;
-    background-color: map-get($colors,orange_color);
-    box-sizing: border-box;
-    @include reverse_breakpoint("mini-ipad") {
-        padding-top: 0;
-    }
-    }
-    @include reverse_breakpoint("mini-ipad") {
-        flex-direction: column;
-    }
-}
-    figure {
-        margin-left: 2.4%;
     }
 
 }

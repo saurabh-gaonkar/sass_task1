@@ -1,46 +1,60 @@
 .application-period {
-    @include mg_rule(top,83px);
+    @include mg_rule(top, 83px);
+
     .wrapper {
-        background: map-get($colors,faint_gray);
+        background: map-get($colors, faint_gray);
         padding: 70px 0 71px;
 
         h4 {
-            color: map-get($colors,dark_gray);
-            font-size: map-get($font,font-xxxiii);
+            color: map-get($colors, dark_gray);
+            font-size: map-get($font, font-xxxiii);
             font-weight: bold;
             text-align: center;
+
             @include reverse_breakpoint("tablet") {
-                font-size: map-get($font,font-xxi);
+                font-size: map-get($font, font-xxi);
             }
         }
     }
-    @at-root
-    &__heading {
-        color: map-get($colors,dark_gray);
-        font-size: 30px;
+
+    @at-root &__heading {
+        color: map-get($colors, dark_gray);
+        font-size: map-get($font,font-xxx);
         font-weight: bold;
         text-align: center;
     }
 
-    @at-root
-    &__buttons {
-        @include mg_rule(top,11px);
-        @include flex_properties(center,normal);
+    @at-root &__buttons {
+        @include mg_rule(top, 11px);
+        @include flex_properties(center, normal);
         column-gap: 19px;
-        
+
         li {
             width: 155px;
             padding: 12px 0;
             border-radius: 8px;
-            background-color:map-get($colors,orange_color);
+            background-color: map-get($colors, orange_color);
+
             a {
                 width: 100%;
-                color: map-get($colors,primary_color);
+                color: map-get($colors, primary_color);
                 font-weight: bold;
                 text-align: center;
+                @include transition-effect();
+
+                &:hover {
+                    @include hover-effect();
+                }
             }
+
+            @include transition-effect();
+
             &:hover {
-                background-color:map-get($colors,dark_blue);
+                background-color: map-get($colors, dark_blue);
+            }
+
+            @include reverse_breakpoint("mobile") {
+                width: 125px;
             }
         }
     }
