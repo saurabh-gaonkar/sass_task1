@@ -596,7 +596,7 @@ li {
         flex-direction: column; } }
     .success__design figure {
       width: 565px;
-      height: 509px;
+      height: 566px;
       flex-basis: 58.2%; }
       @media screen and (max-width: 995px) {
         .success__design figure {
@@ -903,8 +903,6 @@ li {
   @media screen and (max-width: 995px) {
     .application-process__header .eligibility {
       display: block; } }
-  .application-process__header .eligibility:hover ~ button {
-    display: block; }
   @media screen and (max-width: 995px) {
     .application-process__header .eligibility::after {
       content: "";
@@ -1114,7 +1112,7 @@ footer {
           color: #fff;
           text-align: center; } }
       footer .social-media__stay-in-touch:hover {
-        color: #F4910B; }
+        background-color: #14466E; }
     @media screen and (max-width: 995px) {
       footer .social-media {
         padding: 20px 0; } }

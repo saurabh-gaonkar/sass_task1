@@ -57,9 +57,9 @@
                 display: block;
             }
 
-            &:hover~button {
-                display: block;
-            }
+            // &:hover~button {
+            //     display: block;
+            // }
 
             &::after {
                 @include reverse_breakpoint("mini-ipad") {

@@ -3,6 +3,10 @@ $(document).ready(function(){
         $(".header__top").slideToggle();
         $(".header__bottom").slideToggle();
     });
+
+    $(".eligibility").click(function(){
+        $(".eligibility ~ button").toggle();
+    })
 });
 
 
