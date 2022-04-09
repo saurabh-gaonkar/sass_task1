@@ -1,0 +1,153 @@
+footer {
+    @include mg_rule(top,84px);
+
+    .wrapper {
+        padding: 20px 0 45px;
+        border-top: 1px solid map-get($colors,orange_color);
+        @include flex-properties(normal, normal);
+        @include reverse_breakpoint("mini-ipad") {
+            flex-direction: column;
+        }
+    }
+
+    @at-root
+    .footer-logo {
+        width: 91px;
+        height: 50px;
+        @include reverse_breakpoint("mini-ipad") {
+            display: none;      
+          }
+    }
+
+    @at-root
+    .address-info {
+        @include mg_rule(left, 27.5%);
+        border-right: 1px solid map-get($colors, orange_color);
+        flex-basis: 15.5%;
+
+        address {
+            @include mg_rule(bottom,8px);
+            span {
+                width: auto;
+                display:block;
+                color: map-get($colors, faint_black);
+                font-size: map-get($font, font-xii);
+            }
+        }
+        a {
+            display: block;
+            color: map-get($colors, faint_black);
+            font-size: map-get($font, font-xii);
+        }
+        @include reverse_breakpoint("mini-ipad") {
+            padding-bottom: 20px;
+            margin-left: 0;
+            border-right: none;
+            border-bottom: 1px solid map-get($colors, orange_color);
+        }
+    }
+
+        .social-media {
+            padding: 0 4.1%;
+            @at-root
+            &__icons {
+                @include mg_rule(top,15px);
+                li {
+                    a {
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+            }
+            @at-root
+            &__get-to-know {
+                color: map-get($colors,faint_black);
+                font-size: map-get($font,font-xii);
+            }
+
+            @at-root
+            &__stay-in-touch {
+                margin-top: 11px;
+                color: map-get($colors,bright-blue);
+                font-size: 13px;
+                font-weight: bold;
+                white-space: nowrap;
+                &::after {
+                @include font-iconafter("\f105",13px);
+                @include mg_rule(left,4%);
+                @include reverse_breakpoint("mini-ipad") {
+                    @include font-iconafter("",0);
+                }
+                }
+                @include reverse_breakpoint("mini-ipad") {
+                    width:100%;
+                    padding: 20px 0;
+                    background-color: map-get($colors,orange_color);
+                    color: map-get($colors,primary_color);
+                    text-align: center;
+                   }
+            }
+
+            @at-root
+            &__icons {
+                width: 77%;
+                @include flex-properties(space-between,center);
+                @include mg_rule(top,15px);
+                margin-left: 5%;
+                @include reverse_breakpoint("mini-ipad") {
+                    width:30%;
+                   }
+            }
+
+            @include reverse_breakpoint("mini-ipad") {
+             padding: 20px 0;
+            }
+        }
+
+        @at-root
+        .footer-block-title {
+            @include mg_rule(bottom, 16px);
+            width: 60%;
+            color: orange;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        @at-root
+        .quick-links {
+            padding: 0 3%;
+            border-right: 1px solid map-get($colors, orange_color);
+            flex-basis: 18.2%;
+            &__lists {
+                @include flex-properties(space-between, normal);
+
+                ul {
+                    @include flex-properties(normal, normal);
+                    flex-direction: column;
+                    row-gap: 5px
+                }
+
+                a {
+                    display: block;
+                    color: map-get($colors, faint_black);
+                    font-size: map-get($font, font-xii);
+                }
+                @include reverse_breakpoint("mini-ipad") {
+                    flex-direction: column;
+                    row-gap: 5px;  
+                }
+            }
+            @at-root
+            &__lists {
+                @include mg_rule(top,22px);
+            }
+            @include reverse_breakpoint("mini-ipad") {
+                padding: 20px 0;
+                border-right: none;
+                border-bottom: 1px solid map-get($colors,orange_color);
+            }
+        }
+
+    }

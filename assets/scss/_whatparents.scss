@@ -3,20 +3,28 @@
     @at-root
     &__header {
     .wrapper {
-        padding: 25px 0;
+        padding: 24px 0;
         background-color:map-get($colors,dark_orange);
         h5 {
             color: #fff;
-            font-size: 42px;
+            font-size: map-get($font, font-xl22);
             text-align: center;
+            @include reverse_breakpoint("tablet") {
+                font-size: map-get($font,font-xxviii);
+            }
         }
     }
 }
 
 @at-root
+&__slider {
+    @include flex-properties(normal,center);
+}
+
+@at-root
 &__content {
 
-    margin-left: 7%;
+    margin:3% 7%;
     p {
         width: 90%;
         color: map-get($colors,primary_color);
@@ -25,6 +33,12 @@
         line-height: 43px;
         @include reverse_breakpoint("pc") {
             line-height: initial;
+        }
+        @include reverse_breakpoint("mini-ipad") {
+            width: 100%;
+        }
+        @include reverse_breakpoint("tablet") {
+            font-size: map-get($font,font-xxiii);
         }
     }
 
@@ -66,9 +80,16 @@
     padding: 94px 38px;
     background-color: map-get($colors,orange_color);
     box-sizing: border-box;
+    @include reverse_breakpoint("mini-ipad") {
+        padding-top: 0;
+    }
+    }
+    @include reverse_breakpoint("mini-ipad") {
+        flex-direction: column;
     }
 }
     figure {
         margin-left: 2.4%;
     }
+
 }

@@ -4,14 +4,17 @@
         .wrapper {
             h6 {
                 color: map-get($colors,primary_color);
-                font-size: 45px;
+                font-size: 49px;
                 font-weight: bold;
                 text-align: center;
+                @include reverse_breakpoint("tablet") {
+                    font-size: map-get($font,font-xxvi);
+                }
             }
+            background-color: map-get($colors,bright-blue);
         }
         &__title {
-            padding: 44px 0;
-            background-color: map-get($colors,bright-blue);
+            padding: 46px 0 54px;
         }
 
         &__buttons {
@@ -27,6 +30,30 @@
                 &:hover {
                     background-color: map-get($colors,black-blue);
                 }
+                @include reverse_breakpoint("mini-ipad") {
+                    width: 50%;
+                    background-color: map-get($colors,black-blue);
+                    display: none;
+                }
+            }
+            @include reverse_breakpoint("mini-ipad") {
+                padding-bottom: 50px;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .eligibility {
+            @include reverse_breakpoint("mini-ipad") {
+                display: block;
+            }
+            &:hover ~ button {
+                display: block;
+            }
+            &::after {
+                @include reverse_breakpoint("mini-ipad") {
+                    @include font-iconafter("\f0d7",14px);
+                    margin-left: 10px;
+                }
             }
         }
     }
@@ -37,7 +64,7 @@
         }
         @at-root
         &__leftpart {
-            padding: 5.1% 7% 7.4%;
+            padding: 5.1% 7% 7.3%;
             flex-basis: 51.3%;
             background-color: map-get($colors,smoke-color);
             @at-root
@@ -56,9 +83,9 @@
                 @include mg_rule(top,28px);
                 li {
                     width: -webkit-fill-available;
-                    @include mg_rule(bottom,20px);
-                    color: map-get($colors,faint_black);
-                    font-size: 20px;
+                    @include mg_rule(bottom,15px);
+                    color: map-get($colors,lighter-black);
+                    font-size: map-get($font,font-xxi);
                     &::before {
                         content: "\f111";
                         color: map-get($colors,orange_color);
@@ -79,7 +106,7 @@
                 @include flex_properties(normal,normal);
                 @include mg_rule(top,31px);
                 flex-direction: column;
-                row-gap: 30px;
+                row-gap: 28px;
                 &__name {
                     font-size: map-get($font,font-xxiv);
                     color: map-get($colors,light-black);
@@ -89,9 +116,15 @@
                     font-size: map-get($font,font-xx);
                 }
             }
+            @include reverse_breakpoint("mini-ipad") {
+                flex-basis: 100%;
+            }
         }
         &__rightpart {
             width: 464px;
+            @include reverse_breakpoint("mini-ipad") {
+                display: none;
+            }
         }
     }
 
@@ -105,6 +138,9 @@
                     font-size: map-get($font,font-xxxii);
                     font-weight: bold;
                     text-align: center;
+                    @include reverse_breakpoint("mini-ipad") {
+                        font-size: map-get($font,font-xxi);
+                    }
                 }
             }
             @at-root
@@ -117,7 +153,7 @@
         
             @at-root
             &__buttons {
-                @include mg_rule(top,13px);
+                @include mg_rule(top,11px);
                 @include flex_properties(center,normal);
                 column-gap: 19px;
                 
@@ -131,6 +167,9 @@
                         color: map-get($colors,primary_color);
                         font-weight: bold;
                         text-align: center;
+                    }
+                    &:hover {
+                        background-color: map-get($colors,orange_color);
                     }
                 }
             }

@@ -1,126 +1,224 @@
 // header styling here 
 header {
-    @at-root   
-    .header__top {
-        @include flex_properties(flex-end,center);
+    @at-root .header__top {
+        @include flex_properties(flex-end, center);
+        row-gap: 20px;
         padding: 3px 0;
-        background-color:map-get($colors,orange_color);
+        background-color: map-get($colors, orange_color);
         position: relative;
         &__menus1 {
-            @include mg_rule(right,3.7%);
-            flex-basis: 67.5%;
-            ul
-               {
-                @include flex_properties(space-between,center);                
-               } 
-            li {
+            @include mg_rule(right, 5.1%);
+            flex-basis: 66%;
+
+            ul {
+                @include flex_properties(space-between, center);
+
+                li {
+                    position: relative;
                     text-align: center;
-                    @at-root
+
+                    &:hover>ul {
+                        display: flex;
+                    }
+
                     .search {
+                        padding: 0 21px;
                         text-indent: -9999px;
+
                         &::before {
-                            @include font-icon("\f002",12px);
-                            @include mg_rule(left,2%);
+                            @include font-icon("\f002", 14px);
+                            @include mg_rule(left, 2%);
                             text-indent: -28px;
                         }
-                        // &::after {
-                        //     @include font-iconafter("|",12px);
-                        //     text-indent: 0;
-                        // }
+                        @include reverse_breakpoint("tablet") {
+                           display: none
+                        } 
                     }
 
                     a {
+                        @include mg_rule(bottom, 3px);
                         width: 100%;
                         padding: 0 12px;
-                        border-right: map-get($font,font-i) solid map-get($colors,primary_color);
-                        color: map-get($colors, primary_color);
-                        font-size: map-get($font,font-xii);
+                        border-right: map-get($font, font-i) solid map-get($colors, primary_color);
+                        color: map-get($colors, faint_white);
+                        font-size: map-get($font, font-xii);
                         white-space: nowrap;
+
+                        @include reverse_breakpoint("mini-ipad") {
+                            border-right: none;
+                        }
                     }
 
-                    @at-root
-                    .drop_icon::after {
-                        @include font-iconafter("\f0d7",12px);
-                        margin-left: 6%;
+                    .drop_icon {
+                        padding: 0 19px;
+
+                        &::after {
+                            @include font-iconafter("\f0d7", 12px);
+                            margin-left: 6%;
+                        }
                     }
 
                     ul {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            flex-direction: column;
-                        display: none;     
+                        width: 100%;
+                        position: absolute;
+                        top: 30px;
+                        left: 0;
+                        flex-direction: column;
+                        display: none;
+
                         li {
+                            width: 100%;
+
                             a {
+                                width: 100%;
                                 border: none;
+                                color: map-get($colors, orange_color);
+                                text-align: center;
                             }
-                        }       
+                        }
+                        @include reverse_breakpoint("tablet") {
+                            z-index: 1;
+                            top: 0;
+                            left: 100%;
+                        } 
+
                     }
 
                 }
-            }
-        
-        &__menus2 {
-            @include flex_properties(space-between,center);
-            @include mg_rule(right,2%);
-            flex-basis: 12%;
-            li {
-                img {
-                    width:  1vw;
-                    height: 18px;
-                    color: map-get($colors,primary_color);
-                }
-            }
-            @include reverse_breakpoint("mini-ipad") {
-                width: 20%;
+                @include reverse_breakpoint("tablet") {
+                    flex-direction: column;
+                    row-gap: 10px;
+                } 
             }
         }
+
+        &__menus2 {
+            @include flex_properties(space-between, center);
+            @include mg_rule(right, 2%);
+
+            @include reverse_breakpoint("mini-ipad") {
+                width: 35%;
+            }
+
+            flex-basis: 12%;
+
+            li {
+                img {
+                    width: 16px;
+                    height: 16px;
+                    color: map-get($colors, primary_color);
+                }
+            }
+        }
+
         @include reverse_breakpoint("mini-ipad") {
             flex-direction: column;
         }
-    }
 
+        @include reverse_breakpoint("tablet") {
+            // display: none;
+        }
+        @include reverse_breakpoint("mini-ipad") {
+            background-color: map-get($colors,black_color);
+        }
+    }
+    @at-root
     .header__bottom {
-        padding:22px 0;
+        padding: 22px 0;
         display: flex;
         align-items: center;
-         @include flex_properties(normal,center);
+        
+        @include reverse_breakpoint("mini-ipad") {
+           flex-direction: column;
+           row-gap: 10px;
+        }
+
+        @include reverse_breakpoint("tablet") {
+            // display: none;
+        }
+
+        @include flex_properties(normal, center);
+
         h1 {
-     
+
             flex-basis: 10%;
-            a { 
+
+            a {
                 img {
-                  border: 1px solid #000;  
+                    border: 1px solid #000;
                 }
             }
         }
 
-     
+        @at-root
         &__menus {
-            @include flex_properties(space-between,center);
-            @include mg_rule(left,auto);
-            @include mg_rule(right,0.6%);
+            @include flex_properties(space-between, center);
+            @include mg_rule(left, auto);
+            @include mg_rule(right, 0.6%);
             flex-basis: 76.3%;
-            li
-            
-            a {
+
+            li a {
                 padding: 0 43px;
-                border-right: 1px solid map-get($colors,faint_black);
-                color: map-get($colors,orange_color);
-                font-size: map-get($font,font-xiv);
+                border-right: 1px solid map-get($colors, faint_black);
+                color: map-get($colors, orange_color);
+                font-size: map-get($font, font-xiv);
                 white-space: nowrap;
+
+                @include reverse_breakpoint("mini-ipad") {
+                    font-size: 12px;
+                }
+                @include reverse_breakpoint("tablet") {
+                    font-size: 10px;
+                } 
             }
 
             :last-child {
                 padding: 0px;
                 border: none;
             }
+            @include reverse_breakpoint("mini-ipad") {
+                width: 100%;
+                margin-left: 0;
+            } 
+            @include reverse_breakpoint("tablet") {
+                margin-left: 1%;
+            } 
 
         }
     }
 
-    .mobile-header {
+    @at-root .mobile-header {
         display: none;
+        padding: 1.7% 5.4%;
+        background: map-get($colors, orange_color);
+
+        @at-root &__logo {
+            width: 91px;
+            height: 50px;
+            background-color: map-get($colors, primary_color);
+        }
+
+        @at-root &__menu {
+            color: map-get($colors, primary_color);
+            font-size: map-get($font, font-xxxviii);
+
+            &::after {
+                @include font-iconafter("\f107", 30px);
+                @include mg_rule(left, 5px);
+            }
+        }
+
+        @at-root &__search {
+            color: map-get($colors, primary_color);
+            text-indent: -9999px;
+
+            &::before {
+                @include font-icon("\f002", 30px);
+            }
+        }
+
+        @include reverse_breakpoint("tablet") {
+            @include flex-properties(space-between, center);
+        }
     }
 }
-

@@ -1,13 +1,17 @@
 .application-period {
+    @include mg_rule(top,83px);
     .wrapper {
         background: map-get($colors,faint_gray);
-        padding: 74px 0;
+        padding: 70px 0 71px;
 
         h4 {
             color: map-get($colors,dark_gray);
-            font-size: map-get($font,font-xxxiv);
+            font-size: map-get($font,font-xxxiii);
             font-weight: bold;
             text-align: center;
+            @include reverse_breakpoint("tablet") {
+                font-size: map-get($font,font-xxi);
+            }
         }
     }
     @at-root
@@ -20,7 +24,7 @@
 
     @at-root
     &__buttons {
-        @include mg_rule(top,13px);
+        @include mg_rule(top,11px);
         @include flex_properties(center,normal);
         column-gap: 19px;
         
@@ -34,6 +38,9 @@
                 color: map-get($colors,primary_color);
                 font-weight: bold;
                 text-align: center;
+            }
+            &:hover {
+                background-color:map-get($colors,dark_blue);
             }
         }
     }

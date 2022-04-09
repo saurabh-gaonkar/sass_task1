@@ -3,7 +3,7 @@
       
     &__header {
         position: absolute;
-        bottom: 7%;
+        bottom:11%;
         left: 50%;
         color: map-get($colors, primary_color);
         font-size: 50px;
@@ -15,6 +15,9 @@
         }
         @include reverse_breakpoint("mini-ipad") {
             font-size: 30px;
+        }
+        @include reverse_breakpoint("tablet") {
+            font-size: 17px;
         }
     }
 
