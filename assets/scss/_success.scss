@@ -36,6 +36,7 @@
             @include reverse_breakpoint("tablet") {
                 top: 61.2%;
             }
+            
         }
 
         @at-root &__para {
@@ -192,6 +193,25 @@
 
         @include reverse_breakpoint("tablet") {
             font-size: map-get($font,font-xx);
+        }
+    }
+    .dropper-image,.dropper-image-right {
+        width: 50px;
+        height: 60px;
+        position: absolute;
+        bottom: -30px;
+        left: 34%;
+        @include reverse_breakpoint("mini-ipad") {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .dropper-image-right {
+        left: 54.3%;
+        @include reverse_breakpoint("mini-ipad") {
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 

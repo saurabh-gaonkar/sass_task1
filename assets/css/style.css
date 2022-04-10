@@ -689,6 +689,22 @@ li {
     @media screen and (max-width: 768px) {
       .success h3 {
         font-size: 20px; } }
+  .success .dropper-image, .success .dropper-image-right {
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    bottom: -30px;
+    left: 34%; }
+    @media screen and (max-width: 995px) {
+      .success .dropper-image, .success .dropper-image-right {
+        left: 50%;
+        transform: translateX(-50%); } }
+  .success .dropper-image-right {
+    left: 54.3%; }
+    @media screen and (max-width: 995px) {
+      .success .dropper-image-right {
+        left: 50%;
+        transform: translateX(-50%); } }
 
 .application-period {
   margin-top: 83px; }
@@ -755,14 +771,14 @@ li {
         .what-parents-saying__header .wrapper h5 {
           font-size: 28px; } }
   .what-parents-saying__content {
-    flex-basis: 41%;
-    margin: 3% 7%; }
+    flex-basis: 46%;
+    margin: 4% 4.2% 5%; }
     .what-parents-saying__content p {
       color: #fff;
       font-size: 26px;
       text-align: center;
       line-height: 43px;
-      margin-bottom: 20px; }
+      margin-bottom: 16px; }
       @media screen and (max-width: 1280px) {
         .what-parents-saying__content p {
           font-size: 20px;
@@ -781,7 +797,7 @@ li {
       font-weight: bold;
       text-align: center; }
   .what-parents-saying__slider .wrapper {
-    padding: 94px;
+    padding: 94px 40px;
     background-color: #F4910B;
     box-sizing: border-box; }
     @media screen and (max-width: 995px) {
@@ -800,7 +816,8 @@ li {
         row-gap: 50px; } }
   .what-parents-saying figure {
     width: 512px;
-    height: 343px; }
+    height: 343px;
+    margin-left: 4.2%; }
     @media screen and (max-width: 995px) {
       .what-parents-saying figure {
         width: 100%; } }

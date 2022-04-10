@@ -20,8 +20,8 @@
     }
 
     @at-root &__content {
-        flex-basis: 41%;
-        margin: 3% 7%;
+        flex-basis: 46%;
+        margin: 4% 4.2% 5%;
 
         p {
             color: map-get($colors, primary_color);
@@ -29,7 +29,7 @@
             text-align: center;
             line-height: 43px;
 
-            @include mg_rule(bottom, 20px);
+            @include mg_rule(bottom, 16px);
 
             @include reverse_breakpoint("pc") {
                 font-size: 20px;
@@ -59,7 +59,7 @@
     &__slider {
 
         .wrapper {
-            padding: 94px;
+            padding: 94px 40px;
             background-color: map-get($colors, orange_color);
             box-sizing: border-box;
 
@@ -85,6 +85,7 @@
     figure {
         width: 512px;
         height: 343px;
+        @include mg_rule(left,4.2%);
         @include reverse_breakpoint("mini-ipad") {
             width: 100%;
         }
