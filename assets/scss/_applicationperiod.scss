@@ -41,10 +41,6 @@
                 font-weight: bold;
                 text-align: center;
                 @include transition-effect();
-
-                &:hover {
-                    @include hover-effect();
-                }
             }
 
             @include transition-effect();

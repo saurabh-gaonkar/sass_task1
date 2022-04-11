@@ -443,7 +443,7 @@ li {
         font-size: 30px; } }
     @media screen and (max-width: 768px) {
       .banner__header {
-        font-size: 17px; } }
+        font-size: 21px; } }
   .banner figure {
     height: 569px; }
 
@@ -750,8 +750,6 @@ li {
         -moz-transition: All ease-in-out 0.3s;
         -ms-transition: All ease-in-out 0.3s;
         -o-transition: All ease-in-out 0.3s; }
-        .application-period__buttons li a:hover {
-          color: #0000ff; }
       .application-period__buttons li:hover {
         background-color: #1B5788; }
       @media screen and (max-width: 425px) {
@@ -820,7 +818,8 @@ li {
     margin-left: 4.2%; }
     @media screen and (max-width: 995px) {
       .what-parents-saying figure {
-        width: 100%; } }
+        width: auto;
+        margin: auto; } }
 
 .application-period {
   margin-top: 83px; }
@@ -866,8 +865,6 @@ li {
         -moz-transition: All ease-in-out 0.3s;
         -ms-transition: All ease-in-out 0.3s;
         -o-transition: All ease-in-out 0.3s; }
-        .application-period__buttons li a:hover {
-          color: #0000ff; }
       .application-period__buttons li:hover {
         background-color: #1B5788; }
       @media screen and (max-width: 425px) {
@@ -883,6 +880,9 @@ li {
       font-size: 49px;
       font-weight: bold;
       text-align: center; }
+      @media screen and (max-width: 1280px) {
+        .application-process__header .wrapper h6 {
+          font-size: 40px; } }
       @media screen and (max-width: 768px) {
         .application-process__header .wrapper h6 {
           font-size: 26px; } }
@@ -1129,7 +1129,8 @@ footer {
           color: #fff;
           text-align: center; } }
       footer .social-media__stay-in-touch:hover {
-        background-color: #14466E; }
+        background-color: #1D5A8A;
+        color: #fff; }
     @media screen and (max-width: 995px) {
       footer .social-media {
         padding: 20px 0; } }

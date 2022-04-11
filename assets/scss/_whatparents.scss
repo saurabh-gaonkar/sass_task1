@@ -87,7 +87,8 @@
         height: 343px;
         @include mg_rule(left,4.2%);
         @include reverse_breakpoint("mini-ipad") {
-            width: 100%;
+            width: auto;
+            margin: auto;
         }
     }
 

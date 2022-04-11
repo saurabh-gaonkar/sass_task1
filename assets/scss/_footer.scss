@@ -121,7 +121,8 @@ footer {
             @include transition-effect();
 
             &:hover {
-                background-color: map-get($colors,black-blue );
+                background-color: map-get($colors,dark-blue);
+                color: map-get($colors,primary_color);
             }
         }
 

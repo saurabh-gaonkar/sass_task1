@@ -20,7 +20,7 @@
         }
 
         @include reverse_breakpoint("tablet") {
-            font-size: map-get($font,font-xvii);
+            font-size: map-get($font,font-xxi);
         }
     }
 

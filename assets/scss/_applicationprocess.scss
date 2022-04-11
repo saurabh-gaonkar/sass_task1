@@ -8,7 +8,9 @@
                 font-size: map-get($font,font-xlix);
                 font-weight: bold;
                 text-align: center;
-
+                @include reverse_breakpoint("pc") {
+                    font-size: map-get($font,font-xl);
+                }
                 @include reverse_breakpoint("tablet") {
                     font-size: map-get($font, font-xxvi);
                 }
